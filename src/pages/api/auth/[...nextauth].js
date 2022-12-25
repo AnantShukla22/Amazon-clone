@@ -10,7 +10,7 @@ export const authOptions = {
     }),
   ],
 
-  secret:process.env.SECRET
+  secret:process.env.NEXT_PUBLIC_SECRET
 
 }
 
