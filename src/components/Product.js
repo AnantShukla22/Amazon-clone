@@ -27,7 +27,7 @@ const Product = ({ id, title, description, category, image, ratings, price }) =>
       <p className="text-xs my-2 line-clamp-3 ">{description}</p>
 
       <p className="mb-5 font-semibold">Rs {price}</p>
-      <button onClick={addItemToBasket} className="mt-2 button">Add To basket</button>
+      <button onClick={addItemToBasket} className="mt-2 button">Add To Cart</button>
     </div>
   )
 }
