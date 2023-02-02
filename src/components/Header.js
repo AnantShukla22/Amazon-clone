@@ -39,9 +39,9 @@ const Header = () => {
                 </div>
 
                 {/* utility div */}
-                <div className="text-white flex items-center space-x-6 text-xs mx-6 whitespace-nowrap">
+                <div className="text-white flex items-center space-x-6 text-xs mx-6 whitespace-nowrap over">
                     <div onClick={!session ? signIn : signOut} className="link">
-                        <p >{session ? `Welcome, ${session.user.name}` : "Signin"}</p>
+                        <p className="overflow-hidden">{session ? `Welcome, ${session.user.name}` : "Signin"}</p>
                         <p className="font-extrabold md:text-sm">Account & Lists</p>
 
                     </div>

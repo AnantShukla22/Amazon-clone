@@ -8,7 +8,8 @@ import { selectItems, selectTotal } from "../redux/basketSlice"
 
 
 const Cart = () => {
-    const router=useRouter()
+
+    const router = useRouter()
     const items = useSelector(selectItems)
     const total = useSelector(selectTotal)
     const session = useSession()
@@ -64,13 +65,24 @@ const Cart = () => {
                                 <div className="flex">
                                     <h2 className="text-lg font-semibold self-center ">Subtotal ({items.length} items):</h2>
                                     <span className="ml-4 text-lg font-bold underline text-amber-800">
-                                       Rs-{total}
+                                        Rs-{total}
                                     </span>
                                 </div>
 
-                                <button
-                                onClick={()=>router.push("success")}
-                                disabled={session} className="button text-sm animate-bounce mt-4 px-9">{!session ? "Sign in to Checkout" : "Proceed to Checkout"}</button>
+                                {session &&
+                                    <button
+                                        onClick={() => router.push("/")}
+                                         className="button text-sm animate-bounce mt-4 px-9">Sign in to Checkout</button>
+
+                                }
+
+                                {!session &&
+                                    <button
+                                        onClick={() => router.push("success")}
+                                             className="button text-sm animate-bounce mt-4 px-9">Proceed to Checkout
+                                    </button>
+                                }
+
                             </div>
 
                         </div>)}
