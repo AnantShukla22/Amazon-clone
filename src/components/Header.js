@@ -40,9 +40,9 @@ const Header = () => {
 
                 {/* utility div */}
                 <div className="text-white flex items-center space-x-6 text-xs mx-6 whitespace-nowrap over">
-                    <div onClick={!session ? signIn : signOut} className="link overflow-x-hidden w-32" >
+                    <div onClick={!session ? signIn : signOut} className="link overflow-x-hidden w-28" >
                         <p >{session ? `Welcome, ${session.user.name}` : "Sign In"}</p>
-                        <p className="font-extrabold md:text-sm">Account & Lists</p>
+                        <p className="font-extrabold md:text-sm ">Account & Lists</p>
 
                     </div>
                     <div onClick={() => router.push("orders")}
@@ -55,7 +55,7 @@ const Header = () => {
                         <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">
                             {items.length}
                         </span>
-                        <ShoppingCartIcon className="h-10" />
+                        <ShoppingCartIcon className="h-8" />
                         <p className="hidden md:inline font-extrabold md:text-sm mt-1.5">Basket</p>
                     </div>
                 </div>
